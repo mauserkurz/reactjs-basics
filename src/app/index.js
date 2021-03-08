@@ -7,9 +7,7 @@ import Home from './components/Home';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      homeLink: 'Home',
-    };
+    this.state = { homeLink: 'Home' };
   }
 
   onGreet() {
@@ -35,7 +33,8 @@ class App extends React.Component {
               name={ "Max" }
               initialAge={ 27 }
               greet={ this.onGreet }
-              changeLink={ payload => this.onChangeLinkName(payload) }/>
+              changeLink={ payload => this.onChangeLinkName(payload) }
+              initialLinkName={ this.state.homeLink }/>
           </div>
         </div>
       </div>

@@ -8,6 +8,12 @@ export default class Home extends React.Component {
       age: props.age,
       status: 0,
     };
+
+    setTimeout(() => {
+      this.setState({
+        status: 1,
+      });
+    }, 3000);
   }
 
   onMakeOlder() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Root from './components/Root';
 import User from './components/User';
@@ -11,17 +11,19 @@ class App extends React.Component {
     return (
       <Router>
         <Root>
-          <Route exact path="/">
-            <Home/>
-          </Route>
+          <Switch>
+            <Route exact path="/">
+              <Home/>
+            </Route>
 
-          <Route path="/user">
-            <User/>
-          </Route>
+            <Route path="/home">
+              <Home/>
+            </Route>
 
-          <Route path="/home">
-            <Home/>
-          </Route>
+            <Route path="/user/:id">
+              <User/>
+            </Route>
+          </Switch>
         </Root>
       </Router>
     );

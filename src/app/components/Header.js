@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default (props) => {
   return (
@@ -6,15 +7,16 @@ export default (props) => {
       <div className="container">
         <ul className="nav navbar-nav">
           <li className="nav-item">
-            <a
+            <NavLink
               className="nav-link"
-              href="#">Home</a>
+              activeStyle={{ color: 'red' }}
+              to="/home">Home</NavLink>
           </li>
 
           <li className="nav-item">
-            <a
+            <NavLink
               className="nav-link"
-              href="#">User</a>
+              to="/user/4">User</NavLink>
           </li>
         </ul>
       </div>
